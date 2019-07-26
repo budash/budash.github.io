@@ -6,7 +6,7 @@
 var type = connection.effectiveType;
 function updateConnectionStatus() {
   document.getElementById("eff_type").innerHTML = "Effective type changed from " + type + " to " + connection.effectiveType;
-    document.getElementById("type").innerHTML = "Effective type changed from " + type + " to " + connection.type;
+    document.getElementById("type").innerHTML = "Type " + connection.type;
 }
 
 connection.addEventListener('change', updateConnectionStatus);
