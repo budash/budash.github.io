@@ -7,6 +7,10 @@ var type = connection.effectiveType;
 function updateConnectionStatus() {
   document.getElementById("eff_type").innerHTML = "Effective type changed from " + type + " to " + connection.effectiveType;
     document.getElementById("type").innerHTML = "Type " + connection.type;
+    document.getElementById("rtt").innerHTML = "RTT " + connection.rtt;
+   document.getElementById("downlink").innerHTML = "downlink " + connection.downlink;
+   document.getElementById("savedata").innerHTML = "savedata " + connection.saveData;
+   document.getElementById("downlinkMax").innerHTML = "downlinkMax " + connection.saveData;
 }
 
 connection.addEventListener('change', updateConnectionStatus);
@@ -19,6 +23,12 @@ connection.addEventListener('change', updateConnectionStatus);
 <p id="eff_type">Effective Type</p>
 
 <p id="type">Type</p>
+
+<p id="rtt">RTT</p>
+<p id="downlink">downlink</p>
+
+<p id="savedata">downlink</p>
+<p id="downlinkMax">downlinkMax</p>
 
 <button type="button" onclick="updateConnectionStatus()">Try it</button>
 
