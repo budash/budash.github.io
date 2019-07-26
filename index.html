@@ -5,7 +5,8 @@
 	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var type = connection.effectiveType;
 function updateConnectionStatus() {
-  document.getElementById("demo").innerHTML = "Connection type changed from " + type + " to " + connection.effectiveType;
+  document.getElementById("eff_type").innerHTML = "Effective type changed from " + type + " to " + connection.effectiveType;
+    document.getElementById("type").innerHTML = "Effective type changed from " + type + " to " + connection.type;
 }
 
 connection.addEventListener('change', updateConnectionStatus);
@@ -15,7 +16,9 @@ connection.addEventListener('change', updateConnectionStatus);
 
 <h2>JavaScript in Head</h2>
 
-<p id="demo">Connection Type</p>
+<p id="eff_type">Effective Type</p>
+
+<p id="type">Type</p>
 
 <button type="button" onclick="updateConnectionStatus()">Try it</button>
 
