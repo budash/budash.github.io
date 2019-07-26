@@ -1,35 +1,23 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Test shavar</title>
+<script>
+	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var type = connection.effectiveType;
+function updateConnectionStatus() {
+  document.getElementById("demo").innerHTML = "Connection type changed from " + type + " to " + connection.effectiveType;
+}
+
+connection.addEventListener('change', updateConnectionStatus);
+</script>
 </head>
 <body>
-<div id="#container"></div>
-<H3><a href="http:\\test1.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test2.html">test 2</a> </H3><p/> <br/>
-<H3><a href="http:\\test3.html">test 3</a> </H3><p/> <br/>
-<H3><a href="http:\\test4.html">test 4</a> </H3><p/> <br/>
-<H3><a href="http:\\test5.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test6.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test7.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test8.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test9.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test10.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test11.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test12.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test13.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test14.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test15.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test16.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test17.html">test 1</a> </H3><p/> <br/>
-<H3><a href="http:\\test18.html">test 1</a> </H3><p/> <br/>
 
-<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-	$("documend").ready(function(){
-	   $("#container").load("http:\\test4.html") ;
+<h2>JavaScript in Head</h2>
 
-	});
+<p id="demo">Connection Type</p>
 
-	</script>
+<button type="button" onclick="updateConnectionStatus()">Try it</button>
+
 </body>
-</html>
+</html> 
