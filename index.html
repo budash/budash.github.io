@@ -2,7 +2,7 @@
 <html>
 <head>
 <script>
-	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+	var connection = /*navigator.connection || navigator.mozConnection || */navigator.webkitConnection;
 var type = connection.effectiveType;
 function updateConnectionStatus() {
   document.getElementById("demo").innerHTML = "Connection type changed from " + type + " to " + connection.effectiveType;
