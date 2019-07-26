@@ -10,7 +10,7 @@ function updateConnectionStatus() {
     document.getElementById("rtt").innerHTML = "RTT " + connection.rtt;
    document.getElementById("downlink").innerHTML = "downlink " + connection.downlink;
    document.getElementById("savedata").innerHTML = "savedata " + connection.saveData;
-   document.getElementById("downlinkMax").innerHTML = "downlinkMax " + connection.saveData;
+   document.getElementById("downlinkMax").innerHTML = "downlinkMax " + connection.downlinkMax;
 }
 
 connection.addEventListener('change', updateConnectionStatus);
