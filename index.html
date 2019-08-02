@@ -32,5 +32,23 @@ connection.addEventListener('change', updateConnectionStatus);
 
 <button type="button" onclick="updateConnectionStatus()">Try it</button>
 
+    <div id="result"></div>
+    <script>        
+
+    function displayWindowSize(){
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+
+        document.getElementById("result").innerHTML = "Width: " + w + ", " + "Height: " + h;
+    }
+
+    window.addEventListener("resize", displayWindowSize);
+
+    displayWindowSize();
+
+    </script>
+
+    <p><strong>Note:</strong> Please resize the browser window to see how it works.</p>
+
 </body>
 </html> 
