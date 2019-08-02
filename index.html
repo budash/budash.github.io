@@ -39,7 +39,7 @@ connection.addEventListener('change', updateConnectionStatus);
         var w = document.documentElement.clientWidth;
         var h = document.documentElement.clientHeight;
 
-        document.getElementById("result").innerHTML = "Width: " + w + ", " + "Height: " + h;
+        document.getElementById("result").innerHTML = "Width: " + w + ", " + "Height: " + h + " window.innerWidth :" + window.innerWidth + "  screen.width : " + screen.width;
     }
 
     window.addEventListener("resize", displayWindowSize);
