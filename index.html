@@ -33,6 +33,8 @@ connection.addEventListener('change', updateConnectionStatus);
 <button type="button" onclick="updateConnectionStatus()">Try it</button>
 
     <div id="result"></div>
+    
+    <div id="vp"></div>
     <script>        
 
     function displayWindowSize(){
@@ -40,9 +42,14 @@ connection.addEventListener('change', updateConnectionStatus);
         var h = document.documentElement.clientHeight;
 
         document.getElementById("result").innerHTML = "Width: " + w + ", " + "Height: " + h + " window.innerWidth :" + window.innerWidth + "  screen.width : " + screen.width + " s.h: " + screen.height;
+        
+        var vp = window.visualViewport;
+        document.getElementById("vp").innerHTML = "vp Width: " + vp.width + ", " + "vp Height: " + vp.height + " scale :" + vp.scale + "  vp.offsetLeft : " + vp.offsetLeft + " vp.offsetTop: " + vp.offsetTop;
+        
     }
 
     window.addEventListener("resize", displayWindowSize);
+    window.addEventListener("scroll", displayWindowSize);
 
     displayWindowSize();
 
